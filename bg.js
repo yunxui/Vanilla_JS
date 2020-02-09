@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+const cnt = document.querySelector(".cnt");
 
 const IMG_NUMBER = 4;
 
@@ -6,7 +6,7 @@ function paintImage(imgNumber) {
   const image = new Image();
   image.src = `image/${imgNumber + 1}.png`;
   image.classList.add("bgImage");
-  body.prepend(image);
+  cnt.appendChild(image);
 }
 
 function genRanddom() {
