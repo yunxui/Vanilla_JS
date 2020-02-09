@@ -1,5 +1,6 @@
 const clockContainer = document.querySelector(".js-clock");
-const clockTitle = clockContainer.querySelector("h1");
+const clockTitle = clockContainer.querySelector("h2");
+const dateTitle = clockContainer.querySelector("h1");
 
 function getTime() {
   const date = new Date();
@@ -11,8 +12,19 @@ function getTime() {
   } : ${sec < 10 ? `0${sec}` : sec}`;
 }
 
+function getDate() {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDay();
+  dateTitle.innerText = `${year}.${month < 10 ? `0${month}` : month}.${
+    day < 10 ? `0${day}` : day
+  }`;
+}
+
 function init() {
   getTime();
+  getDate();
   setInterval(getTime, 1000);
 }
 

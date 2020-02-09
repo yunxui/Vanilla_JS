@@ -31,10 +31,10 @@ function paintToDo(text) {
 
   toDoList.appendChild(li);
   li.id = newId;
+  li.appendChild(delBtn);
+  delBtn.innerHTML = "";
   li.appendChild(span);
   span.innerText = text;
-  li.appendChild(delBtn);
-  delBtn.innerHTML = "❌";
   delBtn.addEventListener("click", deleteToDo);
 
   const toDoObj = {
@@ -49,6 +49,7 @@ function handleSubmit(event) {
   const currentValue = toDoInput.value;
   paintToDo(currentValue);
   saveToDos();
+  toDoInput.value = "";
 }
 
 function loadTodos() {

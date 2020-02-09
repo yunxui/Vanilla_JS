@@ -9,18 +9,28 @@
   </head>
   <body>
     <div class="cnt">
-      <div class="js-clock">
-        <h1>00:00</h1>
+      <div class="app">
+        <div class="home">
+          <div class="js-clock">
+            <h1>0000.00.00</h1>
+            <h2>00:00</h2>
+          </div>
+          <span class="js-weather"></span>
+          <div class="user">
+            <form class="js-form form">
+              <input type="text" placeholder="What is u r name?" />
+            </form>
+            <h4 class="js-greetings greetings"></h4>
+          </div>
+        </div>
+
+        <div class="toDos">
+          <ul class="js-toDoList"></ul>
+          <form class="js-toDoForm">
+            <input type="text" placeholder="Write a to do" />
+          </form>
+        </div>
       </div>
-      <form class="js-form form">
-        <input type="text" placeholder="What is u r name?" />
-      </form>
-      <h4 class="js-greetings greetings"></h4>
-      <form class="js-toDoForm">
-        <input type="text" placeholder="Write a to do" />
-      </form>
-      <ul class="js-toDoList"></ul>
-      <span class="js-weather"></span>
     </div>
     <script src="clock.js"></script>
     <script src="app.js"></script>
