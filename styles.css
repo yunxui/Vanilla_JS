@@ -92,9 +92,14 @@ body {
   border-radius: 16px;
   background: none;
 }
+
 .js-toDoList li button:hover {
   background: #5abdff;
   transition-duration: 0.3s;
+}
+
+.js-toDoList li button:active {
+  outline: none;
 }
 
 .js-toDoList::-webkit-scrollbar {
